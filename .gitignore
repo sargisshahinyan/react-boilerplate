@@ -1,0 +1,16 @@
+# system files and IDE
+.idea
+/*.DS_Store
+*.DS_Store
+/.DS_Store
+.DS_Store
+.vscode
+*.sublime-*
+
+# DotEnv
+.env
+.env.local
+
+# regrenratble content
+node_modules
+dist
