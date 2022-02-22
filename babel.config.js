@@ -6,9 +6,15 @@ module.exports = function (api) {
       '@babel/preset-env',
       {
         useBuiltIns: 'entry',
+        corejs: 3,
       },
     ],
-    '@babel/preset-react',
+    [
+      '@babel/preset-react',
+      {
+        runtime: 'automatic',
+      },
+    ],
   ];
   const plugins = [
     '@babel/plugin-proposal-optional-chaining',

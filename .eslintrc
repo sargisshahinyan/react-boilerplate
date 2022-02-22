@@ -2,7 +2,25 @@
   "env": {
     "browser": true
   },
+  "plugins": [
+    "import",
+    "jsx-a11y",
+    "react",
+    "react-hooks"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "17.0.2"
+    }
+  },
   "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
   "rules": {
     "quotes": [2, "single"],
     "jsx-quotes": [2, "prefer-double"],
@@ -96,6 +114,69 @@
       "exports": "always-multiline",
       "functions": "always-multiline"
     }],
-    "brace-style": [2, "stroustrup"]
+    "brace-style": [2, "stroustrup"],
+    "no-underscore-dangle": [1, {
+      "allowAfterThis": true,
+      "enforceInMethodNames": false
+    }],
+    "no-unused-vars": [2, {"vars": "all", "args": "after-used"}],
+    "import/extensions": [2, "ignorePackages", {
+      "js": "never",
+      "mjs": "never",
+      "jsx": "never"
+    }],
+    "import/no-anonymous-default-export": 0,
+    "react/jsx-filename-extension": [1, {
+      "extensions": [".js", ".jsx"]
+    }],
+    "react/jsx-indent": [2, 2],
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-fragments": [2, "element"],
+    "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
+    "react/jsx-curly-spacing": [2, {
+      "when": "never",
+      "allowMultiline": true,
+      "children": true
+    }],
+    "react/jsx-key": 2,
+    "react/jsx-closing-bracket-location": [2, "line-aligned"],
+    "react/jsx-equals-spacing": [2, "never"],
+    "react/jsx-curly-brace-presence": [2, {
+      "props": "never",
+      "children": "never"
+    }],
+    "react/jsx-tag-spacing": [2, {
+      "closingSlash": "never",
+      "beforeSelfClosing": "always",
+      "afterOpening": "never",
+      "beforeClosing": "never"
+    }],
+    "react/jsx-boolean-value": [2, "never", { "always": [] }],
+    "react/jsx-props-no-multi-spaces": 2,
+    "react/jsx-wrap-multilines": [2, {
+      "declaration": "parens-new-line",
+      "assignment": "parens-new-line",
+      "return": "parens-new-line",
+      "arrow": "parens-new-line",
+      "condition": "parens-new-line",
+      "logical": "parens-new-line",
+      "prop": "parens-new-line"
+    }],
+    "react/jsx-max-props-per-line": [2, {
+      "maximum": 1,
+      "when": "multiline"
+    }],
+    "react/jsx-no-undef": 2,
+    "react/jsx-no-useless-fragment": 2,
+    "react/jsx-closing-tag-location": 2,
+    "react/no-deprecated": 2,
+    "react/no-string-refs": [2, {
+      "noTemplateLiterals": true
+    }],
+    "react/destructuring-assignment": [2, "always"],
+    "react/no-unsafe": 2,
+    "react-hooks/exhaustive-deps": 2,
+    "react/jsx-uses-react": 0,
+    "react/react-in-jsx-scope": 0
   }
 }

@@ -4,7 +4,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
-const common = require('./webpack.common.js');
+const common = require('./webpack.common');
 
 const getPlugins = () => {
   const plugins = [];
