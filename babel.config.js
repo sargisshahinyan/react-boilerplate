@@ -15,6 +15,7 @@ module.exports = function (api) {
         runtime: 'automatic',
       },
     ],
+    '@babel/preset-typescript',
   ];
   const plugins = [
     '@babel/plugin-proposal-optional-chaining',

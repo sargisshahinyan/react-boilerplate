@@ -34,7 +34,7 @@ const getPlugins = () => {
 
 module.exports = {
   entry: {
-    app: './src/index.js',
+    app: './src/index.tsx',
   },
   plugins: getPlugins(),
   output: {
@@ -117,7 +117,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(js|jsx|mjs|ts|tsx)$/,
+        test: /\.(js|jsx|mjs)$/,
         exclude: /node_modules/,
         use: [
           {
@@ -128,6 +128,13 @@ module.exports = {
               compact: isProduction,
             },
           },
+        ],
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          'ts-loader',
         ],
       },
     ],
