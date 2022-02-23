@@ -6,7 +6,8 @@
     "import",
     "jsx-a11y",
     "react",
-    "react-hooks"
+    "react-hooks",
+    "@typescript-eslint/eslint-plugin"
   ],
   "settings": {
     "react": {
@@ -14,13 +15,18 @@
       "version": "17.0.2"
     }
   },
-  "parser": "@babel/eslint-parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
       "modules": true
-    }
+    },
+    "project": "tsconfig.json",
+    "sourceType": "module"
   },
+  "extends": [
+    "plugin:@typescript-eslint/recommended"
+  ],
   "rules": {
     "quotes": [2, "single"],
     "jsx-quotes": [2, "prefer-double"],
@@ -114,7 +120,7 @@
       "exports": "always-multiline",
       "functions": "always-multiline"
     }],
-    "brace-style": [2, "stroustrup"],
+    "brace-style": [2, "1tbs"],
     "no-underscore-dangle": [1, {
       "allowAfterThis": true,
       "enforceInMethodNames": false
@@ -177,6 +183,26 @@
     "react/no-unsafe": 2,
     "react-hooks/exhaustive-deps": 2,
     "react/jsx-uses-react": 0,
-    "react/react-in-jsx-scope": 0
+    "react/react-in-jsx-scope": 0,
+    "import/no-default-export": 2,
+    "@typescript-eslint/no-explicit-any": 2,
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/member-delimiter-style": [
+      2,
+      {
+        "multiline": {
+          "delimiter": "semi",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
+      }
+    ]
   }
 }

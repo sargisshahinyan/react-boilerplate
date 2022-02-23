@@ -4,3 +4,4 @@ public
 dist
 node_modules
 webpack.*
+babel.config.js
