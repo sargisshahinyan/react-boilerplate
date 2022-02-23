@@ -114,7 +114,7 @@
       "exports": "always-multiline",
       "functions": "always-multiline"
     }],
-    "brace-style": [2, "stroustrup"],
+    "brace-style": [2, "1tbs"],
     "no-underscore-dangle": [1, {
       "allowAfterThis": true,
       "enforceInMethodNames": false
